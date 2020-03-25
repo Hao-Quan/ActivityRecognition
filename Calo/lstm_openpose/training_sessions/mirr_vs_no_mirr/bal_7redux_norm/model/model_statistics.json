@@ -1,0 +1,10 @@
+{
+  "training_samples": "599",
+  "test_data_count": "150",
+  "training_time_seconds": "381.49715876579285",
+  "recall": "0.7333333333333333",
+  "precision": "0.7362010311370926",
+  "final_accuracy": "0.73333335",
+  "f1_score": "0.7289767031705017",
+  "final_loss": "1.015165"
+}

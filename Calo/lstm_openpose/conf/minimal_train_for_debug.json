@@ -1,0 +1,17 @@
+{
+  "epochs": 1,
+  "model_output": "training_sessions/minimal_train_for_debug/model",
+  "reductions": {
+    "walking_slow":            "walking",
+    "walking_fast":            "walking",
+    "walking_cart":            "walking",
+    "walking_phone":           "walking",
+    "wandering":               "walking",
+    "standing":                "standing",
+    "standing_phone_talking":  "standing_phone_talking",
+    "window_shopping":         "standing",
+    "sitting":                 "sitting",
+    "sitting_phone_talking":   "sitting_phone_talking"
+  },
+  "normalise_poses": true
+}

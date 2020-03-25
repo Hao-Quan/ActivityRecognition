@@ -1,0 +1,25 @@
+{
+  "epochs": 400,
+  "normalise_poses": true,
+  "reductions": {
+    "walking_slow":            "walking",
+    "walking_fast":            "walking",
+    "walking_cart":            "walking",
+    "walking_phone":           "walking",
+    "wandering":               "walking",
+    "standing":                "standing",
+    "standing_phone_talking":  "standing_phone_talking",
+    "window_shopping":         "standing",
+    "sitting":                 "sitting",
+    "sitting_phone_talking":   "sitting_phone_talking"
+  },
+  "store_model": true,
+  "model_output": "training_sessions/redux_vs_norm/redux_norm/model",
+  "har_dataset_path": "activity_recognition/data",
+  "balance_samples": false,
+  "mirror_few_samples": false,
+
+  "video_path": "video_tag/video",
+  "cvat_dumps_path": "video_tag/cvat_annotations",
+  "tags_path": "video_tag/cvat_annotations_sorted"
+}

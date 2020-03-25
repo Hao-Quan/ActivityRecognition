@@ -1,0 +1,15 @@
+{
+  "epochs": 4000,
+  "normalise_poses": true,
+  "reductions": {
+  },
+  "store_model": true,
+  "model_output": "training_sessions/mirr_vs_no_mirr/mirr_bal_no_redux_norm/model",
+  "har_dataset_path": "activity_recognition/data",
+  "balance_samples": true,
+  "mirror_few_samples": true,
+
+  "video_path": "video_tag/video",
+  "cvat_dumps_path": "video_tag/cvat_annotations",
+  "tags_path": "video_tag/cvat_annotations_sorted"
+}

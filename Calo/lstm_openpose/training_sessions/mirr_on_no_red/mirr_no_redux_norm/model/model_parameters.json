@@ -1,0 +1,13 @@
+{
+  "store_model": true,
+  "har_dataset_path": "activity_recognition/data",
+  "mirror_few_samples": true,
+  "video_path": "video_tag/video",
+  "normalise_poses": true,
+  "reductions": {},
+  "epochs": 400,
+  "tags_path": "video_tag/cvat_annotations_sorted",
+  "balance_samples": false,
+  "model_output": "training_sessions/mirr_on_no_red/mirr_no_redux_norm/model",
+  "cvat_dumps_path": "video_tag/cvat_annotations"
+}

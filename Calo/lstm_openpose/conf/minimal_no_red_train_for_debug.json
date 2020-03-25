@@ -1,0 +1,7 @@
+{
+  "epochs": 1,
+  "model_output": "training_sessions/minimal_no_red_train_for_debug/model",
+  "reductions": {
+  },
+  "normalise_poses": true
+}

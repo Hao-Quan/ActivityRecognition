@@ -1,0 +1,15 @@
+{
+  "reductions": {
+    "sitting_phone_talking": "sitting",
+    "sitting":               "sitting",
+    "walking_slow":          "walking",
+    "walking_fast":          "walking",
+    "walking_phone":         "walking",
+    "walking_phone_talking": "walking",
+    "walking_caddy":         "walking",
+    "wandering":             "walking",
+    "standing_free":         "standing",
+    "standing_busy":         "standing",
+    "window_shopping":       "standing"
+  }
+}
