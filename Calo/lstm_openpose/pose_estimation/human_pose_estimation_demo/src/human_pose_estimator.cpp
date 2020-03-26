@@ -234,7 +234,7 @@ bool HumanPoseEstimator::inputWidthIsChanged(const cv::Size& imageSize) {
 HumanPoseEstimator::~HumanPoseEstimator() {
     if (enablePerformanceReport) {
         std::cout << "Performance counts for " << modelPath << std::endl << std::endl;
-        printPerformanceCounts(request.GetPerformanceCounts(), std::cout, false);
+        printPerformanceCounts(request.GetPerformanceCounts(), std::cout, "cpu", false);
     }
 }
 }  // namespace human_pose_estimation

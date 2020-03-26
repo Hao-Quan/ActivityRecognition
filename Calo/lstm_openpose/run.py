@@ -3,9 +3,24 @@ import collections
 import json
 import numpy as np
 import os
-import pose_estimation.build.human_pose_estimation_demo.python.chpe as chpe
+
+import sys
+#sys.path.insert(0, 'pose_estimation/build/human_pose_estimation_demo/python/chpe.py')
+# sys.path.append(1, 'pose_estimation/build/human_pose_estimation_demo/python')
+
+#import chpe as chpe
+from pose_estimation.build.human_pose_estimation_demo.python import chpe as chpe
+
+# from pose_estimation.build.human_pose_estimation_demo.python import chpe as chpe
+#import pose_estimation.build.human_pose_estimation_demo.python.chpe
+# from lib import chpe
+
+# sys.path.insert(0, './lib')
+# import chpe
+
 import tensorflow as tf
 import time
+import yaml
 
 from functools import partial
 from training import lstm_rnn, MAX_HEIGHT, MAX_WIDTH, \

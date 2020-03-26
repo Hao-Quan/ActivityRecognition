@@ -4,7 +4,7 @@
 
 - Ubuntu 16.04 LTS
 - [Intel OpenVINO Toolkit](https://software.intel.com/en-us/openvino-toolkit)
-  - Installation instructions [here](https://docs.openvinotoolkit.org/latest/_docs_install_guides_installing_openvino_linux.html#configure-model-optimizer)
+  - Installation instructions [here](https://docs.openvinotoolkit.org/latest/_docs_install_guides_installing_openvino_linux.html)
 - CMake
 - [SWIG](http://www.swig.org)
 - python >= 3.5
@@ -16,11 +16,11 @@
 ### Setup a running Anaconda virtual environment for RNN HAR training
 
 ```sh
-conda create env -n cat_har
+conda create --name cat_har
+conda activate cat_har
 conda install -n cat_har "python>=3.5" 
 conda install -c anaconda -n cat_har numpy pandas
 conda install -c conda-forge -n cat_har matplotlib tensorflow
-conda activate cat_har
 ```
 
 ### Data set pre-processing
@@ -30,7 +30,9 @@ The pre-processing can de divided in two phases, the first one is performed offl
 Offline phase, for each tagged video:
 1. Ordering of corresponding CVAT tagged traces with regard to (starting_frame, ending_frame) to allow the subsequent
    extraction of skeletons in a single video pass with Lightweight OpenPose HPE.
-2. Lightweight OpenPose run on individual frames containing multiple bounding boxes on the raw video: the extraction of skeleton has been done by maintaining in memory queues for each trace tagged into the CVAT dump. The output is a folder for each trace, containing the time sequence of skeletons, each of 18 joints position (x, y) relative to the bounding box origin, and the class ID representing the tagged action being performed.
+2. Lightweight OpenPose run on individual frames containing multiple bounding boxes on the raw video: the extraction of skeleton has been done by maintaining 
+in memory queues for each trace tagged into the CVAT dump. The output is a folder for each trace, containing the time sequence of skeletons, 
+each of 18 joints position (x, y) relative to the bounding box origin, and the class ID representing the tagged action being performed.
 
 This phase can be launched using the `pre-process` sub-command of the `training.py` CLI:
 
@@ -46,7 +48,8 @@ optional arguments:
                         process.
 ```
 
-To cope with the highly varying length of the average FPT, during the online pre-processing phase of a training session, sliding windows of fixed length have been extracted from each trace.
+To cope with the highly varying length of the average FPT, during the online pre-processing phase of a training session, 
+sliding windows of fixed length have been extracted from each trace.
 
 Online phase, for each video folder, containing the traces of that video:
 1. Loading in memory of time sequences of skeletons produced by the offline phase using python native data structures
@@ -70,29 +73,30 @@ optional arguments:
 ### Run real-time HAR on camera using OpenVINO HPE
 
 1. Create a build directory
-```sh
+```shell script
 mkdir pose_estimation/build
 ```
 
 2. Go to the created build directory
-```sh
+```shell script
 cd pose_estimation/build
 ```
+
 3. Run CMake
-```sh
+```shell script
 cmake -DCMAKE_BUILD_TYPE=Release ../
 ```
 4. Run make
-```sh
+```shell script
 make
 ```
 
 5. Go back to project directory
-```sh
+```shell script
 cd ../..
 ```
 
-6. Run python script
-```sh
+7. Run python script
+```shell script
 python3 run.py
 ```
